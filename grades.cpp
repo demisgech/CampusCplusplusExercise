@@ -83,7 +83,7 @@ again:
         cout << course[i] << setw(12) << letterGrades[i] << endl;
     }
 
-    cout << "Would you like to see your GPA? ";
+    cout << "Would you like to see your GPA?[Y/N] ";
     char choice;
     cin >> choice;
     choice = toupper(choice);
@@ -95,7 +95,7 @@ again:
         char input;
         cin >> input;
         input = toupper(input);
-        if (input == 'y')
+        if (input == 'Y')
             goto again;
         break;
     default:
