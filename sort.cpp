@@ -27,9 +27,9 @@ void bubleSort()
             numbers = temp;
         }
     }
-    for (int i = entries - 1; i < entries; ++i)
+    for (int i = entries - 1; i >= 0; i--)
     {
-        for (int j = 0; j < entries - 1; ++j)
+        for (int j = 0; j < i - 1; ++j)
         {
             if (numbers[j] > numbers[j + 1])
             {
