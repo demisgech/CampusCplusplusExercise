@@ -1,7 +1,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "salaryCalculator.cpp"
+#include "salaryCalculator.h"
 using namespace std;
 
 void manageEmployee()
@@ -15,7 +15,7 @@ void manageEmployee()
     // for (int i = 0; i < 3; i++)
     //     salary[i].displayData();
 
-    cout << "Search Employee by id:" << endl;
+    cout << "Search Employee by id:";
     int id;
     cin >> id;
     for (int i = 0; i < 3; i++)
