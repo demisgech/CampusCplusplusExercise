@@ -2,17 +2,17 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-void Salary::receiveData()
+void Employee::receiveData()
 {
 
     cout << "id: ";
-    cin >> employee.id;
+    cin >> id;
 
     cout << "Name: ";
-    cin >> employee.name;
+    cin >> name;
 
     cout << "Gross Salary: ";
-    cin >> grossSalary;
+    cin >> salary.grossSalary;
 }
 
 void Salary::calculateSalary()
@@ -35,8 +35,7 @@ void Salary::calculateSalary()
     netSalary = grossSalary - incomeTax;
 }
 
-void Salary::displayData()
+void Employee::displayData()
 {
-    cout << "Id" << setw(10) << "Name" << setw(10) << "NetSalary" << endl
-         << employee.id << setw(12) << employee.name << setw(10) << netSalary << endl;
+    cout << id << setw(12) << name << setw(10) << salary.netSalary << endl;
 }
