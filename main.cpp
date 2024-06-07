@@ -1,11 +1,9 @@
-#include <iostream>
+#include "utils/EmployeeBinaryFile.c++"
 #include <iomanip>
-#include "utils/manageEmployee.hpp"
+#include <iostream>
 using namespace std;
 
-int main()
-{
-
-    manageEmployee();
-    return 0;
+int main() {
+  showEmployeeData();
+  return 0;
 }
