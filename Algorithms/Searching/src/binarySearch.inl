@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Searching {
-template <typename T, typename Size>
-Size binarySearch(T elements[], Size size, T target) {
+template <typename T>
+size_t binarySearch(T elements[], size_t size, T target) {
   // cout << "*** Binary Search ***" << endl << "Comming soon...." << endl;
 
   int leftIndex = 0;
@@ -27,8 +27,8 @@ Size binarySearch(T elements[], Size size, T target) {
   // use this algorithm also inside binaryInsertionSort algorithms
 }
 
-template <typename T, typename Size>
-bool binarySearchItem(T elements[], Size size, T target) {
+template <typename T>
+bool binarySearchItem(T elements[], size_t size, T target) {
   int result = binarySearch(elements, size, target);
   return (result < size && elements[result] == target);
 }

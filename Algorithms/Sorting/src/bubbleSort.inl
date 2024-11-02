@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void bubbleSort(T elements[], Size size) {
+template <typename T>
+void bubbleSort(T elements[], size_t size) {
   // cout << "**** Bubble Sort ***" << endl << "Comming soon...." << endl;
   cout << "**** Bubble Sort ***" << endl;
   int pass = 0;

@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void simpleSort(T elements[], Size size) {
+template <typename T>
+void simpleSort(T elements[], size_t size) {
   // cout << "**** Simple Sort ***" << endl << "Comming soon...." << endl;
   cout << "**** Simple Sort ***" << endl;
 

@@ -7,8 +7,8 @@ using namespace Searching;
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void binaryInsertionSort(T elements[], Size size) {
+template <typename T>
+void binaryInsertionSort(T elements[], size_t size) {
   // cout << "**** BinaryInsetion Sort ***" << endl << "Comming soon...." <<
   // endl;
   cout << "**** Binary Insertion Sort ***" << endl;

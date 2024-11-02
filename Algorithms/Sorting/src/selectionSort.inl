@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void selectionSort(T elements[], Size size) {
+template <typename T>
+void selectionSort(T elements[], size_t size) {
   // cout << "**** Selection Sort ***" << endl << "Comming soon...." << endl;
   cout << "**** Selection Sort ***" << endl;
   int pass = 0;

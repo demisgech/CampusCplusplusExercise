@@ -1,16 +1,20 @@
 #ifndef SEARCHING__HPP__
 #define SEARCHING__HPP__
 
+#include <cstdlib>
+
+using namespace std;
+
 namespace Searching {
 
-template <typename T, typename Size>
-Size linearSearch(T elements[], Size size, T target);
+template <typename T>
+size_t linearSearch(T elements[], size_t size, T target);
 
-template <typename T, typename Size>
-Size binarySearch(T elements[], Size size, T target);
+template <typename T>
+size_t binarySearch(T elements[], size_t size, T target);
 
-template <typename T, typename Size>
-bool binarySearchItem(T elements[], Size size, T target);
+template <typename T>
+bool binarySearchItem(T elements[], size_t size, T target);
 
 }  // namespace Searching
 

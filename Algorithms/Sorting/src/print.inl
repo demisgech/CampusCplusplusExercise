@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void print(const T elements[], Size size) {
+template <typename T>
+void print(const T elements[], size_t size) {
   cout << "{";
   for (int i = 0; i < size; ++i) {
     cout << elements[i];
@@ -15,8 +15,8 @@ void print(const T elements[], Size size) {
   cout << "}";
 }
 
-template <typename T, typename Size>
-void print(const T elements[], Size minIndex, Size maxIndex) {
+template <typename T>
+void print(const T elements[], size_t minIndex, size_t maxIndex) {
   cout << "{";
   for (int i = minIndex; i < maxIndex; ++i) {
     cout << elements[i];

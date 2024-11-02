@@ -5,8 +5,8 @@
 using namespace std;
 
 namespace Sorting {
-template <typename T, typename Size>
-void insertionSort(T elements[], Size size) {
+template <typename T>
+void insertionSort(T elements[], size_t size) {
   cout << "**** Insertion Sort ***" << endl << "Comming soon...." << endl;
   for (int i = 1; i < size; ++i) {
     print(elements, 0, i);
