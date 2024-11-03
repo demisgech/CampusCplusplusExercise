@@ -32,7 +32,7 @@ Array<T, Size>::Array(const Array& source) {
 
 template <typename T, std::size_t Size>
 Array<T, Size>& Array<T, Size>::operator=(const Array& other) {
-  if (this != other) {
+  if (this != &other) {
     for (size_t i = 0; i < Size; i++) {
       data[i] = other.data[i];
     }
