@@ -23,6 +23,7 @@ class Array {
   void printArray() const;
   T getFirst() const;
   T getLast() const;
+  T get(size_t index) const;
   void set(const std::size_t index, const T& value);
   std::size_t getSize() const;
 

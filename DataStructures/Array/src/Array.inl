@@ -76,6 +76,13 @@ T Array<T, Size>::getLast() const {
   return data[Size - 1];
 }
 
+template <typename T, std::size_t Size>
+T Array<T, Size>::get(size_t index) const {
+  if (index < 0 || index >= static_cast<int>(Size))
+    throw out_of_range{"Index out of range!"};
+  return data[index];
+}
+
 template <typename T, size_t Size>
 void Array<T, Size>::set(const size_t index, const T& value) {
   if (index < 0 || index >= static_cast<int>(Size))
