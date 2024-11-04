@@ -13,6 +13,7 @@ class ArrayList {
   size_t capacity;
   size_t size;
   void resize(size_t newCapacity);
+  void swap(T& a, T& b);
 
  public:
   ArrayList();
@@ -31,7 +32,9 @@ class ArrayList {
   void deleteAt(size_t index);
   T get(size_t index);
   void set(size_t index, const T& value);
-
+  void reverse();
+  void sort();
+  size_t find(const T& target);
   size_t getSize() const;
   bool isEmpty() const;
   void clear();

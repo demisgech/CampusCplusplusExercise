@@ -17,6 +17,13 @@ void ArrayList<T>::resize(size_t newCapacity) {
 }
 
 template <typename T>
+void ArrayList<T>::swap(T& a, T& b) {
+  T temp = a;
+  a = b;
+  b = temp;
+}
+
+template <typename T>
 ArrayList<T>::ArrayList() : data{new T[1]}, capacity{1}, size{0} {}
 
 template <typename T>
@@ -170,6 +177,38 @@ void ArrayList<T>::set(size_t index, const T& value) {
     throw out_of_range{"Index out of range!"};
   }
   data[index] = value;
+}
+
+template <typename T>
+void ArrayList<T>::reverse() {
+  size_t leftIndex = 0;
+  size_t rightIndex = size - 1;
+  while (leftIndex < rightIndex) {
+    swap(data[leftIndex], data[rightIndex]);
+    --leftIndex;
+    ++rightIndex;
+  }
+}
+
+template <typename T>
+void ArrayList<T>::sort() {
+  for (size_t i = 0; i < size - 1; i++) {
+    size_t minIndex = i;
+    for (size_t j = i + 1; j < size; ++j) {
+      if (data[minIndex] > data[j]) minIndex = j;
+    }
+    if (minIndex != i) {
+      swap(data[i], data[minIndex]);
+    }
+  }
+}
+
+template <typename T>
+size_t ArrayList<T>::find(const T& target) {
+  for (size_t i = 0; i < size; i++) {
+    if (target == data[i]) return i;
+  }
+  return -1;
 }
 
 template <typename T>
