@@ -20,7 +20,13 @@ LinkedList<T>::LinkedList(const T& value) {
 }
 
 template <typename T>
-LinkedList<T>::~LinkedList() {}
+LinkedList<T>::~LinkedList() {
+  Node* current = this->head;
+  while (current != nullptr) {
+    delete current;
+    current = current->next;
+  }
+}
 
 template <typename T>
 void LinkedList<T>::printList() {
@@ -160,9 +166,12 @@ void LinkedList<T>::reverse() {
 }
 
 template <typename T>
-void LinkedList<T>::sort() {}
+void LinkedList<T>::sort() {
+  cout << "Comming soon...." << endl;
+}
 
 template <typename T>
 size_t LinkedList<T>::find(const T& value) {
+  cout << "Comming soon...." << endl;
   return size_t();
 }

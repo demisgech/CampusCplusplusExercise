@@ -10,3 +10,4 @@ target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Array/incl
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ArrayList/include)
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Vector/include)
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/LinkedList/include)
+target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/DoublyLinkedList/include)
