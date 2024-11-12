@@ -116,11 +116,82 @@ void DoublyLinkedList<T>::deleteFirst() {
 
 template <typename T>
 typename DoublyLinkedList<T>::Node* DoublyLinkedList<T>::get(size_t index) {
-  cout << "Comming soon..." << endl;
-  return nullptr;
+  if (index < 0 || index >= this->length)
+    throw out_of_range{"Index out of range!"};
+  Node* current = this->head;
+  for (int i = 0; i < index; ++i) {
+    current = current->next;
+  }
+  return current;
 }
 
 template <typename T>
-void DoublyLinkedList<T>::set(size_t inde, const T& value) {
-  cout << "Comming soon..." << endl;
+void DoublyLinkedList<T>::set(size_t index, const T& value) {
+  Node* current = get(index);
+  current->value = value;
+}
+
+template <typename T>
+void DoublyLinkedList<T>::insert(size_t index, const T& value) {
+  if (index < 0 || index > this->length)
+    throw out_of_range{"Index out of range!"};
+
+  Node* newNode = new Node(value);
+  if (index == 0) {
+    prepend(value);
+    return;
+  }
+  if (index == this->length) {
+    append(value);
+    return;
+  }
+  Node* current = get(index - 1);
+  Node* next = current->next;
+
+  newNode->next = next;
+  next->prev = newNode;
+
+  current->next = newNode;
+  newNode->prev = current;
+  this->length++;
+}
+
+template <typename T>
+void DoublyLinkedList<T>::remove(size_t index) {
+  if (index < 0 || index >= this->length)
+    throw out_of_range{"Index out of range!"};
+  if (index == 0) {
+    deleteFirst();
+    return;
+  }
+  if (index == this->length - 1) {
+    deleteLast();
+    return;
+  }
+  Node* prev = get(index - 1);
+  Node* current = prev->next;
+  Node* next = current->next;
+  prev->next = next;
+  next->prev = prev;
+
+  delete current;
+  this->length--;
+}
+
+template <typename T>
+void DoublyLinkedList<T>::reverse() {
+  Node* current = this->head;
+  this->head = this->tail;
+  this->tail = current;
+  Node* before = nullptr;
+  Node* after = current->next;
+  for (int i = 0; i < this->length; ++i) {
+    after = current->next;
+
+    current->next = before;
+    before = current;
+
+    current->prev = after;
+    current = after;
+  }
 }

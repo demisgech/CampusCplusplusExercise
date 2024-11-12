@@ -36,9 +36,14 @@ class DoublyLinkedList {
   Node* get(size_t index);
 
   /// @brief
-  /// @param inde
+  /// @param index
   /// @param value
-  void set(size_t inde, const T& value);
+  void set(size_t index, const T& value);
+
+  void insert(size_t index, const T& value);
+  void remove(size_t index);
+
+  void reverse();
 };
 
 #include "../src/DoublyLinkedList.inl"

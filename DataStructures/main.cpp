@@ -62,6 +62,28 @@ int main() {
   doublyLinkedList->append(13);
   doublyLinkedList->prepend(11);
 
+  doublyLinkedList->insert(0, 10);
+  doublyLinkedList->insert(2, 15);
+  doublyLinkedList->insert(5, 17);
+
+  doublyLinkedList->set(2, 14);
+  // DoublyLinkedList<int>::Node* value = doublyLinkedList->get(2);
+  auto value = doublyLinkedList->get(2);
+  cout << "Value: " << value->value << endl;
+
+  doublyLinkedList->printList();
+
+  // doublyLinkedList->remove(5);
+  // doublyLinkedList->remove(0);
+  // doublyLinkedList->remove(2);
+
+  cout << "Before Reversed" << endl;
+  doublyLinkedList->printList();
+  doublyLinkedList->reverse();
+
+  cout << "After reversed" << endl;
+  doublyLinkedList->printList();
+
   doublyLinkedList->getHead();
   doublyLinkedList->getTail();
   doublyLinkedList->getLength();
