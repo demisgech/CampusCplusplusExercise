@@ -80,6 +80,8 @@ void LinkedList<T>::deleteLast() {
   }
 
   this->length--;
+  this->tail = pre;
+  this->tail->next = nullptr;
   if (this->length == 0) {
     this->head = this->tail = nullptr;
   }
@@ -163,7 +165,9 @@ void LinkedList<T>::reverse() {
     temp->next = before;
     before = temp;
     temp = after;
+    count++;
   }
+  cout << "Count: " << count << endl;
 }
 
 template <typename T>
