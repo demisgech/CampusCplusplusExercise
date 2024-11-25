@@ -152,6 +152,7 @@ void LinkedList<T>::insert(size_t index, const T& value) {
 
 template <typename T>
 void LinkedList<T>::reverse() {
+  int count = 0;
   Node* temp = this->head;
   this->head = this->tail;
   this->tail = temp;
