@@ -26,7 +26,9 @@ int main() {
     arrayStack.push(3);
     // arrayStack.push(4);
     arrayStack.pop();
-    arrayStack.pop();
+    auto poppedValue = arrayStack.pop();
+    cout << "Popped Value: " << poppedValue << endl;
+
     arrayStack.printStack();
   } catch (const StackException& ex) {
     cout << ex.what();

@@ -91,7 +91,7 @@ T Stack<T, Size>::pop() {
   if (initialSize == 0) {
     throw StackException{"Stack is empty!"};
   }
-  const T poppedValue = data[initialSize];
+  const T poppedValue = data[initialSize - 1];
   initialSize--;
   return poppedValue;
 }
@@ -101,7 +101,7 @@ void Stack<T, Size>::getTop() const {
   if (initialSize == 0) {
     throw StackException{"Stak is empty!"};
   }
-  cout << "Top: " << data[initialSize] << endl;
+  cout << "Top: " << data[initialSize - 1] << endl;
 }
 
 template <typename T, size_t Size>
