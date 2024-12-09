@@ -1,125 +1,3 @@
-// #include <iostream>
-
-// #include "CircularLinkedList.hpp"
-// #include "CircularLinkedListException.hpp"
-
-// using namespace std;
-
-// template <typename T>
-// CircularLinkedList<T>::Node::Node(const T& value) {
-//   this->value = value;
-//   this->next = nullptr;
-// }
-
-// template <typename T>
-// CircularLinkedList<T>::CircularLinkedList(const T& value) {
-//   Node* newNode = new Node(value);
-//   this->head = newNode;
-//   this->tail = newNode;
-//   this->tail->next = head;
-//   this->length = 1;
-// }
-
-// template <typename T>
-// CircularLinkedList<T>::~CircularLinkedList() {
-//   Node* current = this->head;
-//   while (current != this->tail->next) {
-//     delete current;
-//     current = current->next;
-//   }
-// }
-
-// template <typename T>
-// void CircularLinkedList<T>::printList() {
-//   Node* current = this->head;
-//   Node* end = this->tail;
-//   end->next = nullptr;
-//   while (current != end->next) {
-//     cout << current->value << " ";
-//     current = current->next;
-//   }
-// }
-
-// template <typename T>
-// inline void CircularLinkedList<T>::getHead() const {
-//   if (this->head == nullptr) {
-//     throw CircularLinkedListException{"Empty list!"};
-//   }
-//   cout << "Tail: " << this->head->value << endl;
-// }
-
-// template <typename T>
-// inline void CircularLinkedList<T>::getTail() const {
-//   if (this->head == nullptr) {
-//     throw CircularLinkedListException{"Empty list!"};
-//   }
-//   cout << "Tail: " << this->tail->value << endl;
-// }
-
-// template <typename T>
-// inline void CircularLinkedList<T>::getLength() const {
-//   cout << "Length: " << this->length << endl;
-// }
-
-// template <typename T>
-// void CircularLinkedList<T>::append(const T& value) {
-//   Node* newNode = new Node(value);
-//   if (this->head == nullptr) {
-//     this->head = newNode;
-//     this->tail = newNode;
-//   } else {
-//     this->tail->next = newNode;
-//     this->tail = newNode;
-//   }
-//   this->length++;
-// }
-
-// template <typename T>
-// void CircularLinkedList<T>::deleteLast() {
-//   Node* current = this->head;
-//   Node* end = this->tail;
-//   this.ea
-// }
-
-// template <typename T>
-// void CircularLinkedList<T>::prepend(const T& value) {
-//   Node* newNode = new Node(value);
-//   if (this->head == nullptr) {
-//     this->head = newNode;
-//     this->tail = newNode;
-//   } else {
-//     newNode->next = this->head;
-//     this->head = newNode;
-//   }
-//   this->length++;
-// }
-
-// template <typename T>
-// void CircularLinkedList<T>::deleteFirst() {
-//   if (this->head == nullptr) return;
-//   Node* current = this->head;
-//   this->head = this->head->next;
-//   this->length--;
-// }
-
-// template <typename T>
-// inline void CircularLinkedList<T>::deleteAt(size_t index) {}
-
-// template <typename T>
-// inline typename CircularLinkedList<T>::Node* CircularLinkedList<T>::get(
-//     size_t index) {
-//   return nullptr;
-// }
-
-// template <typename T>
-// inline void CircularLinkedList<T>::set(size_t index, const T& value) {}
-
-// template <typename T>
-// inline void CircularLinkedList<T>::insert(size_t index, const T& value) {}
-
-// template <typename T>
-// inline void CircularLinkedList<T>::reverse() {}
-
 #include <iostream>
 
 #include "CircularLinkedList.hpp"
@@ -130,8 +8,9 @@ CircularLinkedList<T>::Node::Node(const T& value)
 
 template <typename T>
 CircularLinkedList<T>::CircularLinkedList(const T& value) {
-  head = new Node(value);
-  tail = head;
+  Node* newNode = new Node(value);
+  head = newNode;
+  tail = newNode;
   tail->next = head;
   length = 1;
 }

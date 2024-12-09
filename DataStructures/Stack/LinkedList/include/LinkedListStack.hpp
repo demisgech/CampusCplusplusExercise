@@ -18,13 +18,15 @@ class Stack {
  public:
   Node* top;
   size_t size;
+  Stack();
   Stack(const T& value);
   void printStack();
   void push(const T& value);
   T pop();
 
-  void getTop() const;
-  void getHeight() const;
+  T getTop() const;
+  int getHeight() const;
+  bool isEmpty();
 };
 
 #include "../src/LinkedListStack.inl"
