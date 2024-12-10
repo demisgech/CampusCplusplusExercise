@@ -28,8 +28,8 @@ class Stack {
   void push(const T& value);
   T pop();
 
-  void getTop() const;
-  void getHeight() const;
+  T getTop() const;
+  size_t getHeight() const;
 
   bool isFull() const;
 };

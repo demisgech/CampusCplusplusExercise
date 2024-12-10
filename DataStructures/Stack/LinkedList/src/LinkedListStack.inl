@@ -13,6 +13,8 @@ Stack<T>::Node::Node(const T& value) {
 }
 
 template <typename T>
+Stack<T>::Stack() : top{nullptr}, size{0} {}
+template <typename T>
 Stack<T>::Stack(const T& value) {
   Node* newNode = new Node(value);
   this->top = newNode;
@@ -51,14 +53,21 @@ T Stack<T>::pop() {
 }
 
 template <typename T>
-void Stack<T>::getTop() const {
+T Stack<T>::getTop() const {
   if (this->top == nullptr) {
     throw StackException{"Stak is empty!"};
   }
-  cout << "Top: " << this->top->value << endl;
+  // cout << "Top: " << this->top->value << endl;
+  return top->value;
 }
 
 template <typename T>
-void Stack<T>::getHeight() const {
-  cout << "Height: " << this->size << endl;
+int Stack<T>::getHeight() const {
+  // cout << "Height: " << this->size << endl;
+  return size;
+}
+
+template <typename T>
+bool Stack<T>::isEmpty() {
+  return top == nullptr;
 }
