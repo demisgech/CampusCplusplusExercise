@@ -185,8 +185,8 @@ void ArrayList<T>::reverse() {
   size_t rightIndex = size - 1;
   while (leftIndex < rightIndex) {
     swap(data[leftIndex], data[rightIndex]);
-    --leftIndex;
-    ++rightIndex;
+    ++leftIndex;
+    --rightIndex;
   }
 }
 

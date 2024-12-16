@@ -8,7 +8,8 @@ add_executable(excute
                 # main.cpp
                 # queueMain.cpp
                 # priorityQueueMain.cpp
-                dequeMain.cpp
+                # dequeMain.cpp
+                testTreeMain.cpp
                 ./CircularLinkedList/src/CircularLinkedListExeption.cpp
                 ./Stack/Exception/src/StackException.cpp
                 ./Stack/Array/src/palindrome.cpp
@@ -35,3 +36,4 @@ target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Queue/Exce
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Queue/LinkedList/include)
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/PriorityQueue/include)
 target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Deque/include)
+target_include_directories(excute PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/Trees/include)
