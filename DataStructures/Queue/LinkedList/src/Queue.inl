@@ -12,6 +12,12 @@ Queue<T>::Node::Node(const T& value) {
 }
 
 template <typename T>
+Queue<T>::Queue() {
+  first = nullptr;
+  last = nullptr;
+}
+
+template <typename T>
 Queue<T>::Queue(const T& value) {
   Node* newNode = new Node(value);
   this->first = newNode;
@@ -64,7 +70,7 @@ typename Queue<T>::Node* Queue<T>::dequeue() {
 
 template <typename T>
 T Queue<T>::getFirst() const {
-  if (this->first == nullptr) {
+  if (this->length < 0) {
     throw QueueException("Queue is empty!");
   }
   return this->first->value;
@@ -79,6 +85,6 @@ T Queue<T>::getLast() const {
 }
 
 template <typename T>
-int Queue<T>::getHeight() const {
+int Queue<T>::getSize() const {
   return this->length;
 }

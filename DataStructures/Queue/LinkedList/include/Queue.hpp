@@ -16,6 +16,7 @@ class Queue {
   int length;
 
  public:
+  Queue();
   Queue(const T& value);
   ~Queue();
   void printQueue();
@@ -24,7 +25,7 @@ class Queue {
 
   T getFirst() const;
   T getLast() const;
-  int getHeight() const;
+  int getSize() const;
 };
 
 #include "../src/Queue.inl"

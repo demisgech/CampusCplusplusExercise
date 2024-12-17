@@ -13,6 +13,8 @@ class BinarySearchTree {
   };
 
   Node* root;
+  int leftLevelLength;
+  int rightLevelLength;
 
  public:
   BinarySearchTree();
@@ -21,6 +23,16 @@ class BinarySearchTree {
   void printTree();
   bool insert(const T& value);
   bool contains(const T& value);
+
+  Node* getMin();
+  Node* getMax();
+  Node* getLeftMax();
+  Node* getRightMin();
+
+  int getHeightOfNode();
+  int getLevelOfNode();
+
+  void deleteNode();
 };
 
 #include "../src/BinarySearchTree.inl"
